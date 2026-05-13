@@ -1,0 +1,27 @@
+# Package manifest — amalgame-math
+#
+# Pure-Amalgame Math facade — constants (PI/E/TAU/SQRT2/LN2/LN10),
+# basic functions (Sqrt/Pow/Exp/Log/…), rounding, trig (Sin/Cos/
+# Tan/Atan2/…), min/max/clamp, sign, integer math (AbsI/PowI/
+# Gcd/Lcm/IsPrime), float checks (IsNaN/IsInf/IsFinite/ApproxEq).
+# Originally bundled in amc's src/stdlib/math.am; extracted into
+# this external package as part of the framework split (project
+# F follow-up, amc >= 0.7.6).
+#
+# Companion package: `amalgame-math-vec` ships Vec3/Vec4/Mat4 in
+# the `Amalgame.Math.Vec` sub-namespace.
+
+[package]
+name              = "amalgame-math"
+version           = "0.1.0"
+license           = "Apache-2.0"
+description       = "Pure-Amalgame Math facade: constants, sqrt/pow/exp/log/trig, gcd/lcm, IsPrime, float checks."
+authors           = ["Bastien Mouget"]
+required-amalgame = ">=0.7.6"
+schema-version    = 1
+
+[stdlib]
+class     = "Math"
+header    = "facade-stub.h"
+namespace = "Amalgame.Math"
+facade    = "facade.am"
